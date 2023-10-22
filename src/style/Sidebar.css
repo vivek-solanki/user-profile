@@ -1,0 +1,19 @@
+.sidebar {
+    width: 20vw; /* Set the width of the sidebar */
+    width: 17vw;
+    height: 100%;
+    background:linear-gradient(0deg, rgba(91,61,200,1) 0%, rgba(62,86,200,1) 100%); /* Set the background color */
+    top: 0;
+    left: 0;
+    padding: 20px; /* Add some padding for spacing */
+    color: #fff; /* Text color */
+  }
+  
+  .sidebar ul {
+    list-style: none; /* Remove default list styling */
+  }
+  
+  .sidebar li {
+    margin-bottom: 10px; /* Add some spacing between list items */
+  }
+  
