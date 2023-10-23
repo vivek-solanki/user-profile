@@ -9,17 +9,17 @@ const ProfileDetail = ({ id }) => {
     axios
       .get("https://panorbit.in/api/users.json")
       .then((res) => {
-        const user = res.data.users.find((user) => user.id === id);
+        const user = res.data.users.find((user) => user.id === 1);
         if (user) {
           setUserData(user);
         } else {
-          console.error(`User ${id} not found`);
+          console.error(`User ${1} not found`);
         }
       })
       .catch((err) => {
         console.error(err);
       });
-  }, [id]);
+  }, [1]);
   return (
     <div className="col-9 ps-0">
       {userData ? (
