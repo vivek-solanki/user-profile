@@ -140,7 +140,6 @@ const ProfileDetail = ({ id }) => {
                 </div>
                 <div className="row">
                   <iframe
-                    title="mapframe"
                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5365.742748670856!2d-104.89653463886182!3d39.599149744544846!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c868890cb86a5%3A0x1bc05d9c29c38478!2sGlenborough%20Properties!5e1!3m2!1sen!2sin!4v1697998052101!5m2!1sen!2sin"
                     title="mapframe"
                     width="600"
