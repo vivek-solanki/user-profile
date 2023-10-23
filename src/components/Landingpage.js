@@ -3,12 +3,12 @@ import { useUserContext } from "../context/usercontext";
 import UserList from "./UserList";
 
 const Landingpage = () => {
-  const {isLoading, users} = useUserContext();
+  const { isLoading, users } = useUserContext();
 
   if (isLoading) {
-    return <div>.....Loading</div>
+    return <div>.....Loading</div>;
   }
-  
+
   return (
     <div
       className="container-fluid d-flex justify-content-center align-items-center  bg-primary"
@@ -24,7 +24,9 @@ const Landingpage = () => {
           </div>
           <div className="modal-body overflow-scroll overflow-x-hidden pt-3">
             {users.map((elem) => (
-             <UserList key={elem.id} {...elem}/>
+              <>
+                <UserList key={elem.id} {...elem} />
+              </>
             ))}
           </div>
           <div className="modal-footer" style={{ height: "4vh" }}></div>

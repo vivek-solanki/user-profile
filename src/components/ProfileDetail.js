@@ -2,24 +2,24 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const ProfileDetail = ({ userId }) => {
+const ProfileDetail = ({ id }) => {
   const [userData, setUserData] = useState(null);
 
   useEffect(() => {
     axios
       .get("https://panorbit.in/api/users.json")
       .then((res) => {
-        const user = res.data.users.find((user) => user.id === userId);
+        const user = res.data.users.find((user) => user.id === id);
         if (user) {
           setUserData(user);
         } else {
-          console.error(`User ${userId} not found`);
+          console.error(`User ${id} not found`);
         }
       })
       .catch((err) => {
         console.error(err);
       });
-  }, [userId]);
+  }, [id]);
   return (
     <div className="col-9 ps-0">
       {userData ? (
@@ -140,10 +140,11 @@ const ProfileDetail = ({ userId }) => {
                 </div>
                 <div className="row">
                   <iframe
+                    title="mapframe"
                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5365.742748670856!2d-104.89653463886182!3d39.599149744544846!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c868890cb86a5%3A0x1bc05d9c29c38478!2sGlenborough%20Properties!5e1!3m2!1sen!2sin!4v1697998052101!5m2!1sen!2sin"
                     width="600"
                     height="450"
-                    style={{border:0}}
+                    style={{ border: 0 }}
                     allowfullscreen=""
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"

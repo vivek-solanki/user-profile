@@ -1,45 +1,47 @@
 import React from "react";
 import "../style/Sidebar.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-function Sidebar() {
+function Sidebar(elem) {
+  const { id } = elem;
+
   return (
     <div className="sidebar rounded-5 d-flex justify-content-start align-items-center">
       <ul className="ps-3 w-100 pe-2">
         <li>
-          <Link
-            to="/profile"
-            className="text-decoration-none text-white fs-3 fw-medium"
+          <NavLink
+            to={`/profile/${id}`}
+            className="text-decoration-none text-white fs-3 fw-medium active"
           >
             Profile
-          </Link>
+          </NavLink>
         </li>
         <hr />
         <li>
-          <Link
+          <NavLink
             to="/post"
             className="text-decoration-none text-white fs-3 fw-medium"
           >
             Post
-          </Link>
+          </NavLink>
         </li>
         <hr />
         <li>
-          <Link
+          <NavLink
             to="/gallary"
             className="text-decoration-none text-white fs-3 fw-medium"
           >
             Gallery
-          </Link>
+          </NavLink>
         </li>
         <hr />
         <li>
-          <Link
+          <NavLink
             to="/todo"
             className="text-decoration-none text-white fs-3 fw-medium"
           >
             ToDo
-          </Link>
+          </NavLink>
         </li>
         <hr />
       </ul>
